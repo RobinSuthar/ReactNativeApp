@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View,Text } from "react-native-web";
+import React from "react";
 
-export default function App() {
+
+
+
+const Custompropex1 = () =>{
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <ChildProps name ="Robin" status="Sofwtware Developer" ></ChildProps>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default Custompropex1;
+
+const ChildProps = (props) =>{
+  return <View>
+    <Text style ={{fontSize: 20}} >{props.name}</Text>
+    <Text style ={{fontSize: 20}} >{props.status}</Text>
+  </View>;
+}
